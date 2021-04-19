@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: segment_web_page_views__sessionized
+    description: "The purpose of this model is to assign a `session_id` to page views. The business logic of how this is done is that any period of inactivity of 30 minutes or more resets the session, and any subsequent page views are assigned a new `session_id`. The implementation of this logic is rather involved, and requires multiple CTEs. Comments have been added to the source to describe the purpose of the CTEs that are more esoteric."
+    columns:
+      - name: page_view_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: segment_web_sessions__initial
+    description: "This model performs the aggregation of page views into sessions. The `session_id` having already been calculated in `segment_web_page_views__sessionized`, this model simply calls a bunch of window functions to grab the first or last value of a given field and store it at the session level."
+    columns:
+      - name: session_id
+        tests:
+          - unique
+          - not_null
