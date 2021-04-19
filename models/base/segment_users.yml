@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: segment_users
+    description: "This is a base model for Segment's users table. It deduplicates the table so each user_id is unique."
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
