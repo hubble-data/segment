@@ -8,7 +8,7 @@
 
 with sessions as (
 
-    select * from {{ref('segment_web_sessions__initial')}}
+    select * from {{ref('stg_segment_web_sessions_initial')}}
 
     {% if is_incremental() %}
         where cast(session_start_tstamp as datetime) > (
@@ -25,7 +25,7 @@ with sessions as (
 
 id_stitching as (
 
-    select * from {{ref('segment_web_user_stitching')}}
+    select * from {{ref('stg_segment_web_user_stitching')}}
 
 ),
 

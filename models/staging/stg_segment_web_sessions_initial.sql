@@ -44,7 +44,7 @@
 
 with pageviews_sessionized as (
 
-    select * from {{ref('segment_web_page_views__sessionized')}}
+    select * from {{ref('stg_segment_web_page_views_sessionized')}}
 
     {% if is_incremental() %}
         where cast(tstamp as datetime) > (

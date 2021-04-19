@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: users
+    description: "One row per user_id. This is a list of all users and aggregated information for these users."
+    columns:
+      - name: user_id
+        description: ''
+        tests:
+          - unique
+          - not_null

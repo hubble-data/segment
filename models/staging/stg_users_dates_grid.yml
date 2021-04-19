@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: stg_users_dates_grid
+    description: "Gapless date grid table for quiz_id values. It has one row per quiz_id + date starting on the quiz ID's first recorded date OR the 1st of October 2020 (whichever is the earliest date)."
+    columns:
+      - name: user_id
