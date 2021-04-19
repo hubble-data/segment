@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: users_daily
+    description: "This is a table of user IDs and their corresponding details aggregated each day. It has one row per user_id + date starting on the user_id's activated_at date OR the 1st of January 2015 (whichever is the latest date)."
+    columns:
+      - name: user_id
+        description: ''
