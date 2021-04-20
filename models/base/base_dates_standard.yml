@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: base_dates_standard
-    description: "This table is a gapless date grid which starts on the 1st of January, 2015 and includes every date up to today's date. This table is used as the backbone for any of our 'daily stats' tables.",
+    description: "This table is a gapless date grid which starts on the 1st of January, 2015 and includes every date up to today's date. This table is used as the backbone for any of our 'daily stats' tables."
     columns:
       - name: date
         description: "The date: yyyy-mm-dd"
