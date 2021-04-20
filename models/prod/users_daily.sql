@@ -18,7 +18,7 @@ WITH web_sessions AS (
 stg_1 AS (
   SELECT
   grid.*,
-  web_sessions.num_web_sessions
+  COALESCE(web_sessions.num_web_sessions, 0) AS num_web_sessions
 
   FROM {{ref('stg_users_dates_grid')}} AS grid
   LEFT JOIN web_sessions ON web_sessions.user_id = grid.user_id AND web_sessions.session_start_date = grid.date
