@@ -2,8 +2,7 @@ version: 2
 
 models:
   - name: stg_segment_web_sessions_stitched
-    description: "This model joins initial session data with user stitching to get the field `blended_user_id`, the id for a user across all devices that they can be identified on. This logic is broken out from other models because, while incremental, it will frequently need to be rebuilt from scratch: this is because the user stitching process can change the `blended_user_id` values for historical sessions.
-    It is recommended to typically run this model in its default configuration (incrementally) but on some regular basis to do a `dbt run --full-refresh --models segment_web_sessions__stitched+` so that this model and downstream models get rebuilt."
+    description: "This model joins initial session data with user stitching to get the field `blended_user_id`, the id for a user across all devices that they can be identified on. This logic is broken out from other models because, while incremental, it will frequently need to be rebuilt from scratch: this is because the user stitching process can change the `blended_user_id` values for historical sessions. It is recommended to typically run this model in its default configuration (incrementally) but on some regular basis to do a `dbt run --full-refresh --models segment_web_sessions__stitched+` so that this model and downstream models get rebuilt."
     columns:
       - name: session_id
         description: ''
