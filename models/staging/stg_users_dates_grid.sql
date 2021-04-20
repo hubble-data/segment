@@ -13,7 +13,7 @@ WITH user_activated AS (
 )
 
 SELECT
-d.date as date,
+d.*,
 user_activated.user_id,
 user_activated.user_activated_date,
 DATE_DIFF(d.date, user_activated.user_activated_date, DAY) AS days_since_activated
