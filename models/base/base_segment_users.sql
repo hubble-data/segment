@@ -1,7 +1,7 @@
 WITH source AS (
     SELECT
-    * EXCEPT(timestamp, id, uuid_ts),
-    id AS user_id
+    * EXCEPT(id, uuid_ts),
+    id AS user_id,
     uuid_ts AS user_activated_ts,
     DATE(uuid_ts) AS user_activated_date,
     ROW_NUMBER() OVER(PARTITION BY id ORDER BY timestamp ASC) AS rank

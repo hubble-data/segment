@@ -8,7 +8,7 @@ renamed as (
 
     select
 
-        id as page_view_id, 
+        id as page_view_id,
         anonymous_id,
         user_id,
 
@@ -32,7 +32,6 @@ renamed as (
         context_campaign_source as utm_source,
         context_campaign_medium as utm_medium,
         context_campaign_name as utm_campaign,
-        context_campaign_term as utm_term,
         context_campaign_content as utm_content,
         {{ dbt_utils.get_url_parameter('url', 'gclid') }} as gclid,
         context_ip as ip,
