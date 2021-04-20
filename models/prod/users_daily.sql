@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 WITH web_sessions AS (
   SELECT
   blended_user_id AS user_id,

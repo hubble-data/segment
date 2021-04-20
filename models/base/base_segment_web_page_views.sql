@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 with source as (
 
     select * from {{var('segment_page_views_table')}}
