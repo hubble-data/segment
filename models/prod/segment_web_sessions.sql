@@ -28,7 +28,7 @@ more complicated, the performance tradeoff is worth it.
 
 with sessions as (
 
-    select * from {{ref('segment_web_sessions__stitched')}}
+    select * from {{ref('segment_web_sessions_stitched')}}
 
     {% if is_incremental() %}
     where cast(session_start_tstamp as datetime) > {{sessionization_cutoff}}
