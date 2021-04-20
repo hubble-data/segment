@@ -18,7 +18,6 @@
     'utm_content' : 'utm_content',
     'utm_medium' : 'utm_medium',
     'utm_campaign' : 'utm_campaign',
-    'utm_term' : 'utm_term',
     'gclid' : 'gclid',
     'page_url' : 'first_page_url',
     'page_url_host' : 'first_page_url_host',

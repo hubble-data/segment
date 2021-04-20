@@ -7,7 +7,7 @@ WITH source AS (
     ROW_NUMBER() OVER(PARTITION BY id ORDER BY timestamp ASC) AS rank
 
     FROM {{var('segment_users_table')}}
-),
+)
 
 SELECT
 * EXCEPT(rank)
