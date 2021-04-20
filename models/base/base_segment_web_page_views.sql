@@ -8,7 +8,7 @@ renamed as (
 
     select
 
-        id as page_view_id,
+        id as page_view_id, 
         anonymous_id,
         user_id,
 
