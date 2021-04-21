@@ -10,7 +10,7 @@ models:
           - unique
           - not_null
       - name: user_activated_date
-        description: 'Date ('yyyy-mm-dd') when the user ID was first recorded.'
+        description: "Date ('yyyy-mm-dd') when the user ID was first recorded."
       - name: days_since_activated
         description: 'Number of days since the user ID was activated'
       - name: is_7d_web_active_latest
