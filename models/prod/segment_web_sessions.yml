@@ -13,3 +13,59 @@ models:
         tests:
           - unique
           - not_null
+      - name: session_id
+        description: ''
+      - name: anonymous_id
+        description: ''
+      - name: session_start_tstamp
+        description: ''
+      - name: session_end_tstamp
+        description: ''
+      - name: page_views
+        description: ''
+      - name: utm_source
+        description: ''
+      - name: utm_content
+        description: ''
+      - name: utm_medium
+        description: ''
+      - name: utm_campaign
+        description: ''
+      - name: gclid
+        description: ''
+      - name: first_page_url
+        description: ''
+      - name: first_page_url_host
+        description: ''
+      - name: first_page_url_path
+        description: ''
+      - name: first_page_url_query
+        description: ''
+      - name: referrer
+        description: ''
+      - name: referrer_host
+        description: ''
+      - name: device
+        description: ''
+      - name: device_category
+        description: ''
+      - name: last_page_url
+        description: ''
+      - name: last_page_url_host
+        description: ''
+      - name: last_page_url_path
+        description: ''
+      - name: last_page_url_query
+        description: ''
+      - name: duration_in_s
+        description: ''
+      - name: duration_in_s_tier
+        description: ''
+      - name: referrer_medium
+        description: ''
+      - name: referrer_source
+        description: ''
+      - name: blended_user_id
+        description: ''
+      - name: session_number
+        description: ''

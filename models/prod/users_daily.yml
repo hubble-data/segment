@@ -6,3 +6,55 @@ models:
     columns:
       - name: user_id
         description: ''
+      - name: date
+        description: ''
+      - name: week
+        description: ''
+      - name: week_lastday
+        description: ''
+      - name: month
+        description: ''
+      - name: month_lastday
+        description: ''
+      - name: quarter
+        description: ''
+      - name: quarter_lastday
+        description: ''
+      - name: year
+        description: ''
+      - name: year_lastday
+        description: ''
+      - name: day_of_week
+        description: ''
+      - name: day_of_month
+        description: ''
+      - name: day_of_year
+        description: ''
+      - name: week_of_year
+        description: ''
+      - name: month_of_year
+        description: ''
+      - name: quarter_of_year
+        description: ''
+      - name: year_extract
+        description: ''
+      - name: is_weekend
+        description: ''
+      - name: is_partial_week
+        description: ''
+      - name: is_partial_month
+        description: ''
+      - name: user_activated_date
+        description: ''
+      - name: days_since_activated
+        description: ''
+      - name: num_web_sessions
+        description: ''
+      - name: is_7d_web_active
+        description: ''
+      - name: num_web_sessions_prev_7d
+        description: ''
+      - name: num_web_sessions_prev_30d
+        description: ''
+      - name: num_web_sessions_cum
+        description: ''

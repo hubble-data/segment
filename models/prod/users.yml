@@ -9,3 +9,17 @@ models:
         tests:
           - unique
           - not_null
+      - name: user_activated_date
+        description: ''
+      - name: days_since_activated
+        description: ''
+      - name: num_web_sessions
+        description: ''
+      - name: is_7d_web_active_latest
+        description: ''
+      - name: num_web_sessions_prev_7d
+        description: ''
+      - name: num_web_sessions_prev_30d
+        description: ''
+      - name: num_web_sessions_total
+        description: ''
