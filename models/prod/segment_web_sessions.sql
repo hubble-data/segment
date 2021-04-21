@@ -3,7 +3,8 @@
     materialized = 'incremental',
     unique_key = 'session_id',
     sort = 'session_start_tstamp',
-    dist = 'session_id'
+    dist = 'session_id',
+    tags = ['prod']
     )}}
 
 {% set sessionization_cutoff %}
