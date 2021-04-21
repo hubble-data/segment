@@ -5,9 +5,24 @@ models:
     description: "This is a table of user IDs and their corresponding details aggregated each day. It has one row per user_id + date starting on the user_id's activated_at date OR the 1st of January 2015 (whichever is the latest date)."
     columns:
       - name: user_id
-        description: ''
-      - name: date
-        description: ''
+        description: 'Unique identifier for a user.'
+        tests:
+          - unique
+          - not_null
+      - name: user_activated_date
+        description: 'Date ('yyyy-mm-dd') when the user ID was first recorded.'
+      - name: days_since_activated
+        description: 'Number of days since the user ID was activated'
+      - name: num_web_sessions
+        description: "Number of web sessions the user had on the given date"
+      - name: is_7d_web_active
+        description: 'TRUE/FALSE indicating whether or not the user has had at least 1 web session in the previous 7 days (6 days before the given date + the given date).'
+      - name: num_web_sessions_prev_7d
+        description: 'Total number of web sessions the user had in the past 7 days (6 days before the given date + the given date)'
+      - name: num_web_sessions_prev_30d
+        description: 'Total number of web sessions the user had in the past 30 days (29 days before the given date + the given date)'
+      - name: num_web_sessions_cum
+        description: 'Total number of web sessions the user had up to and including the given date.'
       - name: week
         description: ''
       - name: week_lastday
@@ -43,18 +58,4 @@ models:
       - name: is_partial_week
         description: ''
       - name: is_partial_month
-        description: ''
-      - name: user_activated_date
-        description: ''
-      - name: days_since_activated
-        description: ''
-      - name: num_web_sessions
-        description: ''
-      - name: is_7d_web_active
-        description: ''
-      - name: num_web_sessions_prev_7d
-        description: ''
-      - name: num_web_sessions_prev_30d
-        description: ''
-      - name: num_web_sessions_cum
         description: ''

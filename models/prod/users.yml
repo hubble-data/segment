@@ -5,21 +5,19 @@ models:
     description: "One row per user_id. This is a list of all users and aggregated information for these users."
     columns:
       - name: user_id
-        description: ''
+        description: 'Unique identifier for a user.'
         tests:
           - unique
           - not_null
       - name: user_activated_date
-        description: ''
+        description: 'Date ('yyyy-mm-dd') when the user ID was first recorded.'
       - name: days_since_activated
-        description: ''
-      - name: num_web_sessions
-        description: ''
+        description: 'Number of days since the user ID was activated'
       - name: is_7d_web_active_latest
-        description: ''
+        description: 'TRUE/FALSE indicating whether or not the user has had at least 1 web session in the previous 7 days.'
       - name: num_web_sessions_prev_7d
-        description: ''
+        description: 'Total number of web sessions the user has had in the past 7 days'
       - name: num_web_sessions_prev_30d
-        description: ''
+        description: 'Total number of web sessions the user has had in the past 30 days'
       - name: num_web_sessions_total
-        description: ''
+        description: 'Total number of web sessiosn the user has ever had.'
