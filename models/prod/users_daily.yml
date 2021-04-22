@@ -24,38 +24,34 @@ models:
       - name: num_web_sessions_cum
         description: 'Total number of web sessions the user had up to and including the given date.'
       - name: week
-        description: ''
+        description: 'First day of the week (starting on Sunday) for the given date'
       - name: week_lastday
-        description: ''
+        description: 'Last day of the week (ending on Saturday) for the given date'
       - name: month
-        description: ''
+        description: 'First day of the month for the given date'
       - name: month_lastday
-        description: ''
+        description: 'Last day of the month for the given date'
       - name: quarter
-        description: ''
+        description: 'First day of the quarter for the given date'
       - name: quarter_lastday
-        description: ''
+        description: 'Last day of the quarter for the given date'
       - name: year
-        description: ''
+        description: 'First day of the year for the given date'
       - name: year_lastday
-        description: ''
+        description: 'Last day of the year for the given date'
       - name: day_of_week
-        description: ''
+        description: 'Day of the week the date is on. 1 = Sunday, 2 = Monday, etc.'
       - name: day_of_month
-        description: ''
+        description: 'Day of the month the date is on.'
       - name: day_of_year
-        description: ''
+        description: 'Day of the year the date is on (i.e. 1 = January 1st, etc.)'
       - name: week_of_year
-        description: ''
+        description: 'Week of the year the date is on (i.e. 1 = week of January 1st)'
       - name: month_of_year
-        description: ''
+        description: 'Month of the year the date is on. 1 = January'
       - name: quarter_of_year
-        description: ''
+        description: 'Quarter of the year the date is on.'
       - name: year_extract
-        description: ''
+        description: 'Year that the date is in.'
       - name: is_weekend
-        description: ''
-      - name: is_partial_week
-        description: ''
-      - name: is_partial_month
-        description: ''
+        description: 'True/False indicating whether or not the date is a Saturday or Sunday.'

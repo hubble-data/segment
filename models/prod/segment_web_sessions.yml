@@ -9,63 +9,61 @@ models:
     The logic implemented in this particular model is responsible for incrementally calculating a user's session number; the core sessionization logic is done in upstream models."
     columns:
       - name: session_id
-        description: ''
+        description: 'Unique identifier for a session.'
         tests:
           - unique
-          - not_null
-      - name: session_id
-        description: ''
+          - not_null  
       - name: anonymous_id
-        description: ''
+        description: 'Anonymous ID assigned to an event. All events have an anonymous_id. If a user has not yet triggered an identifies event, then they will have no user_id but will maintain the same anonymous_id for as long as its cached in a session by the browser.'
       - name: session_start_tstamp
-        description: ''
+        description: 'Timestamp indicating when the session_id started.'
       - name: session_end_tstamp
-        description: ''
+        description: 'Timestamp indicating when the session_id ended.'
       - name: page_views
-        description: ''
+        description: 'Number of page views included in the session_id'
       - name: utm_source
-        description: ''
+        description: 'UTM parameters are types of query strings added to the end of a URL. When clicked, they let the domain owners track where incoming traffic is coming from and understand what aspects of their marketing campaigns are driving traffic. where is the traffic specifically coming from? You can be specific here. This ensures our downstream analysis can measure which specific source brings the most conversions. Examples: “twitter”, “customer.io” (email tool), “facebook”, “adroll”.'
       - name: utm_content
-        description: ''
+        description: 'for multiple calls to action on a single page, utm_content indicates which one. For example, on a website, there may be three different display ads. While the link on each display ad will have the same utm_campaign, utm_medium, and utm_source, the utm_content will be different. Examples: “banner”, “left-side”, “bottom-side”'
       - name: utm_medium
-        description: ''
+        description: 'how the traffic is coming to your site? Is it through email, a display ad, an online forum? This ensures our downstream analysis can easily see which channel performs the best. Examples: “email”, “paid-display”, “paid-social”, “organic-social”'
       - name: utm_campaign
-        description: ''
+        description: 'this is the name of your campaign. All marketing activities that support this campaign, needs to have the same utm_campaign so that downstream analysis to measure performance for this specific campaign can be done off this primary key. Examples: “national-toastday”'
       - name: gclid
-        description: ''
+        description: 'Google Click Identifier (used for Google AdWords/Google Analytics).'
       - name: first_page_url
-        description: ''
+        description: 'The URL of the first page the user visited in the web session.'
       - name: first_page_url_host
-        description: ''
+        description: 'The URL host of the first page the user visited in the web session.'
       - name: first_page_url_path
-        description: ''
+        description: 'The URL path of the first page the user visited in the web session.'
       - name: first_page_url_query
-        description: ''
+        description: 'The URL query of the first page the user visited in the web session.'
       - name: referrer
-        description: ''
+        description: 'Dictionary of information about the way the user was referred to the website or app, containing type, name, url and link'
       - name: referrer_host
-        description: ''
+        description: 'Host name from the referrer.'
       - name: device
-        description: ''
+        description: 'Type of device the user was using in the session (e.g. Macintosh)'
       - name: device_category
-        description: ''
+        description: 'High-level grouping of devices. E.g. Tablet, Desktop, etc.'
       - name: last_page_url
-        description: ''
+        description: 'The URL of the last page the user visited in the web session.'
       - name: last_page_url_host
-        description: ''
+        description: 'The URL host of the last page the user visited in the web session.'
       - name: last_page_url_path
-        description: ''
+        description: 'The URL path of the last page the user visited in the web session.'
       - name: last_page_url_query
-        description: ''
+        description: 'The URL query of the last page the user visited in the web session.'
       - name: duration_in_s
-        description: ''
+        description: 'Length of the session in seconds'
       - name: duration_in_s_tier
-        description: ''
+        description: 'Length of the session in seconds, grouped into higher-level tiers. 0s to 9s, 10s to 29s, 30s to 59s, 60s or more'
       - name: referrer_medium
-        description: ''
+        description: 'Medium of the referrer'
       - name: referrer_source
-        description: ''
+        description: 'Source name of the referrer.'
       - name: blended_user_id
-        description: ''
+        description: 'User ID from stitching the anonymous_id and user_id for a group of events in a session. This is because a user can have events in a session before they've been assigned a user_id.'
       - name: session_number
-        description: ''
+        description: 'The session number for the user. 1 = the first session of the user.'

@@ -47,9 +47,7 @@ add_date_intervals AS (
     quarter_of_year,
     year_extract,
 
-    IF(day_of_week IN (1,7), TRUE, FALSE) AS is_weekend,
-    IF(week = DATE_TRUNC(CURRENT_DATE(), WEEK), TRUE, FALSE) AS is_partial_week,
-    IF(month = DATE_TRUNC(CURRENT_DATE(), MONTH), TRUE, FALSE) AS is_partial_month
+    IF(day_of_week IN (1,7), TRUE, FALSE) AS is_weekend
 
     FROM date_array
 )
