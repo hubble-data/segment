@@ -12,7 +12,7 @@ models:
         description: 'Unique identifier for a session.'
         tests:
           - unique
-          - not_null  
+          - not_null
       - name: anonymous_id
         description: 'Anonymous ID assigned to an event. All events have an anonymous_id. If a user has not yet triggered an identifies event, then they will have no user_id but will maintain the same anonymous_id for as long as its cached in a session by the browser.'
       - name: session_start_tstamp
@@ -64,6 +64,6 @@ models:
       - name: referrer_source
         description: 'Source name of the referrer.'
       - name: blended_user_id
-        description: 'User ID from stitching the anonymous_id and user_id for a group of events in a session. This is because a user can have events in a session before they've been assigned a user_id.'
+        description: 'User ID from stitching the anonymous_id and user_id for a group of events in a session. This is because a user can have events in a session before they have been assigned a user_id.'
       - name: session_number
         description: 'The session number for the user. 1 = the first session of the user.'
