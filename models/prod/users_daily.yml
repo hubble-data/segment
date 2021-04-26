@@ -10,7 +10,7 @@ models:
           - unique
           - not_null
         meta:
-          looker.com:
+          seeker:
             measures:
               - name: Unique number of users
                 type: count_distinct
