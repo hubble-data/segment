@@ -3,6 +3,12 @@ version: 2
 models:
   - name: users_daily
     description: "This is a table of user IDs and their corresponding details aggregated each day. It has one row per user_id + date starting on the user_id's activated_at date OR the 1st of January 2015 (whichever is the latest date)."
+    meta:
+      seeker:
+          joins:
+            - join: segment_web_sessions
+              left_on: user_id
+              right_on: user_id
     columns:
       - name: user_id
         description: 'Unique identifier for a user.'
@@ -14,6 +20,8 @@ models:
             measures:
               - name: Unique number of users
                 type: count_distinct
+      - name: date
+        description: "Date ('yyyy-mm-dd') corresponding to the row of data."
       - name: user_activated_date
         description: "Date ('yyyy-mm-dd') when the user ID was first recorded."
       - name: days_since_activated
