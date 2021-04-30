@@ -24,7 +24,7 @@ models:
                 description: "Unique number of users that have had at least one web session in the past 7 days." # measures have default descriptions that are added to Seeker. But, you can override these with your own descriptions if you want!
                 type: count_distinct
                 filters: # you can include filters in your measures. These filters are applied to the data before the calculation.
-                  is_7d_active: "yes"
+                  is_7d_web_active_latest: "yes"
                   user_activated_date: ">= '2020-01-01'"
       - name: user_activated_date
         description: "Date ('yyyy-mm-dd') when the user ID was first recorded."
