@@ -3,12 +3,29 @@ version: 2
 models:
   - name: users
     description: "One row per user_id. This is a list of all users and aggregated information for these users."
+    meta:
+      seeker:
+          joins:
+            - join: segment_web_sessions
+              left_on: user_id
+              right_on: user_id
     columns:
       - name: user_id
         description: 'Unique identifier for a user.'
         tests:
           - unique
           - not_null
+        meta:
+          seeker:
+            measures:
+              num_unique_users: # this is the name of the measure.
+                type: count_distinct # this is the type of calculation that's being done
+              num_unique_7d_active_users:
+                description: "Unique number of users that have had at least one web session in the past 7 days." # measures have default descriptions that are added to Seeker. But, you can override these with your own descriptions if you want!
+                type: count_distinct
+                filters: # you can include filters in your measures. These filters are applied to the data before the calculation.
+                  is_7d_active: "yes"
+                  user_activated_date: ">= '2020-01-01'"
       - name: user_activated_date
         description: "Date ('yyyy-mm-dd') when the user ID was first recorded."
       - name: days_since_activated
@@ -17,6 +34,11 @@ models:
         description: 'TRUE/FALSE indicating whether or not the user has had at least 1 web session in the previous 7 days.'
       - name: num_web_sessions_prev_7d
         description: 'Total number of web sessions the user has had in the past 7 days'
+        meta:
+          seeker:
+            measures:
+              total_num_web_sessions_prev_7d:
+                type: sum
       - name: num_web_sessions_prev_30d
         description: 'Total number of web sessions the user has had in the past 30 days'
       - name: num_web_sessions_total
